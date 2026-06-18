@@ -854,6 +854,15 @@ export default function App() {
             >
               Other free projects
             </a>
+            <span className="text-slate-300">•</span>
+            <a
+              href="https://youtube.com/@the-day-dream?si=hITkcD7S5mN95iwQ"
+              target="_blank"
+              rel="noreferrer"
+              className="text-sky-500 hover:text-sky-600 transition-colors"
+            >
+              YouTube
+            </a>
           </p>
         </footer>
       </div>
