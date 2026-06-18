@@ -38,3 +38,8 @@ Contributing
 - Workflow:
   1. Open an issue for large changes.
   2. Fork, create a feature branch, make your changes, and submit a pull request.
+
+More free projects:
+- https://touch-flow-2026.vercel.app/
+
+Created by Sreerag Harikrishnan.

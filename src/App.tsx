@@ -361,26 +361,26 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen text-white font-sans p-4 md:p-8">
+    <div className="min-h-screen text-slate-900 font-sans bg-slate-50 p-4 md:p-8">
       <div className="max-w-6xl mx-auto space-y-6">
         
         {/* Top Header Navigation Block */}
         <header className="flex flex-col md:flex-row justify-between items-center p-6 glass rounded-2xl gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-green-500/10 border border-green-500/30 text-green-400">
+            <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-sky-100 border border-sky-200 text-sky-600">
               <Sparkles size={24} className="animate-pulse" />
             </div>
             <div>
               <h1 className="text-xl md:text-2xl font-extrabold tracking-tight">
-                VECTRA<span className="font-light text-green-400"> VECTOR</span>
+                VECTRA<span className="font-light text-sky-500"> VECTOR</span>
               </h1>
-              <p className="text-xs text-white/50 font-normal">Convert your images to high quality vector graphic shapes</p>
+              <p className="text-xs text-slate-500 font-normal">Convert your images to high quality vector graphic shapes</p>
             </div>
           </div>
           
           <div className="flex flex-wrap gap-3 items-center">
             {/* Offline Shield Badge */}
-            <div className="flex items-center gap-1.5 px-3 py-1 bg-green-500/5 rounded-full border border-green-500/20 text-[11px] text-green-400 font-medium">
+            <div className="flex items-center gap-1.5 px-3 py-1 bg-sky-100 rounded-full border border-sky-200 text-[11px] text-sky-600 font-medium">
               <Shield className="w-3.5 h-3.5" />
               Works offline (runs in browser)
             </div>
@@ -390,17 +390,17 @@ export default function App() {
         {/* Speed Adjustment Bar */}
         {imageSrc && (
           <div className="flex flex-col sm:flex-row justify-between items-center px-6 py-4 glass rounded-2xl gap-3 text-xs">
-            <span className="text-white/70 font-medium flex items-center gap-2">
-              <Zap className="w-4 h-4 text-green-400" />
+            <span className="text-slate-500 font-medium flex items-center gap-2">
+              <Zap className="w-4 h-4 text-sky-500" />
               Adjust performance (reduces lag on weak devices)
             </span>
-            <div className="flex bg-black/40 p-1 rounded-xl border border-white/5">
+            <div className="flex bg-slate-100 p-1 rounded-xl border border-slate-200">
               <button
                 onClick={() => handleResolutionSwitch(400)}
                 className={`px-3 py-1.5 rounded-lg font-medium transition-all ${
                   resolutionLimit === 400
-                    ? 'bg-green-600 text-white shadow-sm'
-                    : 'text-white/40 hover:text-white'
+                    ? 'bg-sky-600 text-white shadow-sm'
+                    : 'text-slate-600 hover:text-slate-900'
                 }`}
                 title="Super fast conversion with tiny dimensions"
               >
@@ -410,8 +410,8 @@ export default function App() {
                 onClick={() => handleResolutionSwitch(600)}
                 className={`px-3 py-1.5 rounded-lg font-medium transition-all ${
                   resolutionLimit === 600
-                    ? 'bg-green-600 text-white shadow-sm'
-                    : 'text-white/40 hover:text-white'
+                    ? 'bg-sky-600 text-white shadow-sm'
+                    : 'text-slate-600 hover:text-slate-900'
                 }`}
                 title="Default balanced resolution"
               >
@@ -421,8 +421,8 @@ export default function App() {
                 onClick={() => handleResolutionSwitch(0)}
                 className={`px-3 py-1.5 rounded-lg font-medium transition-all ${
                   resolutionLimit === 0
-                    ? 'bg-green-600 text-white shadow-sm'
-                    : 'text-white/40 hover:text-white'
+                    ? 'bg-sky-600 text-white shadow-sm'
+                    : 'text-slate-600 hover:text-slate-900'
                 }`}
                 title="No resizing (can slow down for huge images)"
               >
@@ -440,14 +440,14 @@ export default function App() {
               className="mt-2"
             >
               <div
-                className="drop-zone rounded-3xl p-10 md:p-20 text-center cursor-pointer hover:bg-green-500/5 duration-300 relative overflow-hidden group"
+                className="drop-zone rounded-3xl p-10 md:p-20 text-center cursor-pointer hover:bg-sky-100 duration-300 relative overflow-hidden group"
                 onDrop={handleDrop}
                 onDragOver={preventDefault}
                 onDragEnter={preventDefault}
                 onClick={() => fileInputRef.current?.click()}
               >
                 {/* Emerald corner lights */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-green-500/5 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-sky-100 via-transparent to-transparent pointer-events-none" />
                 
                 <input
                   type="file"
@@ -459,12 +459,12 @@ export default function App() {
                 />
                 
                 <div className="flex flex-col items-center gap-4 relative z-10">
-                  <div className="p-4 bg-green-500/10 border border-green-500/20 text-green-400 rounded-2xl group-hover:scale-105 transition-transform">
+                  <div className="p-4 bg-sky-100 border border-sky-200 text-sky-600 rounded-2xl group-hover:scale-105 transition-transform">
                     <UploadCloud className="w-12 h-12" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-white">Click or drag your image here to begin</h3>
-                    <p className="text-white/40 text-xs mt-2 max-w-sm mx-auto">
+                    <p className="text-slate-500 text-xs mt-2 max-w-sm mx-auto">
                       Supports JPG, PNG, and WebP. Your images are safe and never uploaded to any remote server.
                     </p>
                   </div>
@@ -485,14 +485,14 @@ export default function App() {
                 
                 {/* Uploaded Image details card */}
                 <div className="glass p-5 space-y-4">
-                  <div className="flex justify-between items-center border-b border-white/5 pb-2">
-                    <h2 className="text-xs font-bold uppercase tracking-wider text-green-400 flex items-center gap-2">
+                  <div className="flex justify-between items-center border-b border-slate-200 pb-2">
+                    <h2 className="text-xs font-bold uppercase tracking-wider text-sky-500 flex items-center gap-2">
                       <ImageIcon className="w-4 h-4" />
                       Uploaded Image
                     </h2>
                     <button
                       onClick={resetAll}
-                      className="text-white/40 hover:text-red-400 transition-colors p-1"
+                      className="text-slate-500 hover:text-red-500 transition-colors p-1"
                       title="Upload a different image"
                     >
                       <Trash2 className="w-4 h-4" />
@@ -500,7 +500,7 @@ export default function App() {
                   </div>
 
                   <div className="flex gap-4 items-center">
-                    <div className="w-16 h-16 bg-black rounded-xl overflow-hidden border border-white/10 flex-shrink-0 flex items-center justify-center">
+                    <div className="w-16 h-16 bg-slate-100 rounded-xl overflow-hidden border border-slate-200 flex-shrink-0 flex items-center justify-center">
                       <img
                         src={imageSrc}
                         alt="Thumbnail"
@@ -511,11 +511,11 @@ export default function App() {
                       <p className="font-bold text-white truncate text-sm">
                         {originalImageFile?.name || 'My Image file'}
                       </p>
-                      <p className="text-white/50 text-[11px]">
+                      <p className="text-slate-500 text-[11px]">
                         Original size: {originalDimensions ? `${originalDimensions.width} x ${originalDimensions.height} px` : '--'}
                       </p>
                       {optimizedDimensions && (resolutionLimit > 0) && (
-                        <p className="text-green-400/80 font-medium">
+                        <p className="text-sky-500/90 font-medium">
                           Fitting limit: {optimizedDimensions.width} x {optimizedDimensions.height} px
                         </p>
                       )}
@@ -527,13 +527,13 @@ export default function App() {
                 <div className="glass p-5 space-y-5">
                   
                   {/* Selector Tabs */}
-                  <div className="flex bg-black/40 p-1 rounded-xl border border-white/5 text-xs">
+                  <div className="flex bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs">
                     <button
                       onClick={() => setSettingsMode('preset')}
                       className={`flex-1 py-2 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 ${
                         settingsMode === 'preset'
-                          ? 'bg-green-600/30 text-green-300 border border-green-500/30 shadow-sm'
-                          : 'text-white/50 hover:text-white'
+                          ? 'bg-sky-600/30 text-sky-500 border border-sky-200 shadow-sm'
+                          : 'text-slate-500 hover:text-white'
                       }`}
                     >
                       <Sparkles className="w-3.5 h-3.5" />
@@ -543,8 +543,8 @@ export default function App() {
                       onClick={() => setSettingsMode('custom')}
                       className={`flex-1 py-2 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 ${
                         settingsMode === 'custom'
-                          ? 'bg-green-600/30 text-green-300 border border-green-500/30 shadow-sm'
-                          : 'text-white/50 hover:text-white'
+                          ? 'bg-sky-600/30 text-sky-500 border border-sky-200 shadow-sm'
+                          : 'text-slate-500 hover:text-white'
                       }`}
                     >
                       <Sliders className="w-3.5 h-3.5" />
@@ -555,7 +555,7 @@ export default function App() {
                   {settingsMode === 'preset' ? (
                     /* Ready Preset Grid with UI elements and logo options highlighted */
                     <div className="space-y-3">
-                      <p className="text-xs text-white/50 font-normal">Select a conversion mode below:</p>
+                      <p className="text-xs text-slate-500 font-normal">Select a conversion mode below:</p>
                       <div className="grid grid-cols-1 gap-2.5 max-h-[350px] overflow-y-auto pr-1">
                         {PRESETS.map((preset) => (
                           <button
@@ -563,17 +563,17 @@ export default function App() {
                             onClick={() => setActivePreset(preset.id)}
                             className={`text-left p-3.5 rounded-xl transition-all duration-200 outline-none select-none border ${
                               activePreset === preset.id
-                                ? 'bg-green-950/40 border-green-500/60 text-white shadow-inner'
-                                : 'border-white/5 hover:border-white/10 text-white/70 hover:bg-white/5'
+                                ? 'bg-sky-50 border-sky-200 text-slate-900 shadow-inner'
+                                : 'border-slate-200 hover:border-slate-300 text-slate-600 hover:bg-slate-100'
                             }`}
                           >
                             <div className="flex justify-between items-center mb-1">
                               <span className="font-bold text-xs text-white">{preset.label}</span>
                               {activePreset === preset.id && (
-                                <span className="bg-green-500/20 text-green-400 text-[9px] px-1.5 py-0.5 rounded font-mono uppercase font-bold">Active</span>
+                                <span className="bg-sky-100 text-sky-500 text-[9px] px-1.5 py-0.5 rounded font-mono uppercase font-bold">Active</span>
                               )}
                             </div>
-                            <div className="text-[11px] text-white/50 leading-relaxed">{preset.description}</div>
+                            <div className="text-[11px] text-slate-500 leading-relaxed">{preset.description}</div>
                           </button>
                         ))}
                       </div>
@@ -585,8 +585,8 @@ export default function App() {
                       {/* Color count slider */}
                       <div className="space-y-1.5">
                         <div className="flex justify-between text-xs">
-                          <label className="text-white/70">Colors limit</label>
-                          <span className="text-green-400 font-bold">{colorLimitSetting} colors</span>
+                          <label className="text-slate-500">Colors limit</label>
+                          <span className="text-sky-500 font-bold">{colorLimitSetting} colors</span>
                         </div>
                         <input
                           type="range"
@@ -595,15 +595,15 @@ export default function App() {
                           step={1}
                           value={colorLimitSetting}
                           onChange={(e) => setColorLimitSetting(Number(e.target.value))}
-                          className="w-full h-1.5 bg-white/10 rounded-lg appearance-none cursor-pointer accent-green-500"
+                          className="w-full h-1.5 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-sky-500"
                         />
                       </div>
 
                       {/* Detail slider */}
                       <div className="space-y-1.5">
                         <div className="flex justify-between text-xs">
-                          <label className="text-white/70">Line accuracy level</label>
-                          <span className="text-green-400 font-bold">Level {lineDetailLevel} of 5</span>
+                          <label className="text-slate-500">Line accuracy level</label>
+                          <span className="text-sky-500 font-bold">Level {lineDetailLevel} of 5</span>
                         </div>
                         <input
                           type="range"
@@ -612,9 +612,9 @@ export default function App() {
                           step={1}
                           value={lineDetailLevel}
                           onChange={(e) => setLineDetailLevel(Number(e.target.value))}
-                          className="w-full h-1.5 bg-white/10 rounded-lg appearance-none cursor-pointer accent-green-500"
+                          className="w-full h-1.5 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-sky-500"
                         />
-                        <div className="flex justify-between text-[10px] text-white/30">
+                        <div className="flex justify-between text-[10px] text-slate-400">
                           <span>Simple (Fast)</span>
                           <span>Highly precise</span>
                         </div>
@@ -623,8 +623,8 @@ export default function App() {
                       {/* Preprocess blur radius slider */}
                       <div className="space-y-1.5">
                         <div className="flex justify-between text-xs">
-                          <label className="text-white/70">Smooth edges blur</label>
-                          <span className="text-green-400 font-bold">{smoothingSetting} pixels</span>
+                          <label className="text-slate-500">Smooth edges blur</label>
+                          <span className="text-sky-500 font-bold">{smoothingSetting} pixels</span>
                         </div>
                         <input
                           type="range"
@@ -633,15 +633,15 @@ export default function App() {
                           step={1}
                           value={smoothingSetting}
                           onChange={(e) => setSmoothingSetting(Number(e.target.value))}
-                          className="w-full h-1.5 bg-white/10 rounded-lg appearance-none cursor-pointer accent-green-500"
+                          className="w-full h-1.5 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-sky-500"
                         />
                       </div>
 
                       {/* Stroke Width outline border */}
                       <div className="space-y-1.5">
                         <div className="flex justify-between text-xs">
-                          <label className="text-white/70">Border outlines thickness</label>
-                          <span className="text-green-400 font-bold">{borderThickness}px</span>
+                          <label className="text-slate-500">Border outlines thickness</label>
+                          <span className="text-sky-500 font-bold">{borderThickness}px</span>
                         </div>
                         <input
                           type="range"
@@ -650,15 +650,15 @@ export default function App() {
                           step={0.5}
                           value={borderThickness}
                           onChange={(e) => setBorderThickness(Number(e.target.value))}
-                          className="w-full h-1.5 bg-white/10 rounded-lg appearance-none cursor-pointer accent-green-500"
+                          className="w-full h-1.5 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-sky-500"
                         />
                       </div>
 
                       {/* Decimal places rounding for smaller output */}
                       <div className="space-y-1.5">
                         <div className="flex justify-between text-xs">
-                          <label className="text-white/70">Decimal file size reduction</label>
-                          <span className="text-green-400 font-bold">{decimalPrecision} decimals</span>
+                          <label className="text-slate-500">Decimal file size reduction</label>
+                          <span className="text-sky-500 font-bold">{decimalPrecision} decimals</span>
                         </div>
                         <input
                           type="range"
@@ -667,29 +667,29 @@ export default function App() {
                           step={1}
                           value={decimalPrecision}
                           onChange={(e) => setDecimalPrecision(Number(e.target.value))}
-                          className="w-full h-1.5 bg-white/10 rounded-lg appearance-none cursor-pointer accent-green-500"
+                          className="w-full h-1.5 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-sky-500"
                         />
-                        <span className="text-[10px] text-white/30 block">Fewer decimal numbers produce much smaller files.</span>
+                        <span className="text-[10px] text-slate-400 block">Fewer decimal numbers produce much smaller files.</span>
                       </div>
 
                       {/* Simple checkboxes */}
                       <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                        <label className="flex items-center gap-2 cursor-pointer text-white/70 hover:text-white">
+                        <label className="flex items-center gap-2 cursor-pointer text-slate-500 hover:text-white">
                           <input
                             type="checkbox"
                             checked={sharpenCorners}
                             onChange={(e) => setSharpenCorners(e.target.checked)}
-                            className="rounded bg-black border-white/20 text-green-600 focus:ring-0 cursor-pointer"
+                            className="rounded bg-slate-100 border-slate-200 text-sky-600 focus:ring-0 cursor-pointer"
                           />
                           Sharpen corners
                         </label>
 
-                        <label className="flex items-center gap-2 cursor-pointer text-white/70 hover:text-white">
+                        <label className="flex items-center gap-2 cursor-pointer text-slate-500 hover:text-white">
                           <input
                             type="checkbox"
                             checked={cleanSpecks}
                             onChange={(e) => setCleanSpecks(e.target.checked)}
-                            className="rounded bg-black border-white/20 text-green-600 focus:ring-0 cursor-pointer"
+                            className="rounded bg-slate-100 border-slate-200 text-sky-600 focus:ring-0 cursor-pointer"
                           />
                           Ignore small specks
                         </label>
@@ -699,10 +699,10 @@ export default function App() {
                   )}
 
                   {/* Immediate automatic download switch */}
-                  <div className="pt-4 border-t border-white/5">
-                    <label className="flex items-center justify-between text-xs text-white/60 cursor-pointer select-none">
+                  <div className="pt-4 border-t border-slate-200">
+                    <label className="flex items-center justify-between text-xs text-slate-500 cursor-pointer select-none">
                       <span className="flex items-center gap-2">
-                        <FolderDown className="w-4 h-4 text-green-400" />
+                        <FolderDown className="w-4 h-4 text-sky-500" />
                         Auto-download files immediately
                       </span>
                       <div className="relative inline-flex items-center">
@@ -712,7 +712,7 @@ export default function App() {
                           onChange={(e) => setAutoDownload(e.target.checked)}
                           className="sr-only peer cursor-pointer"
                         />
-                        <div className="w-9 h-5 bg-white/10 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:border-neutral-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-green-600" />
+                        <div className="w-9 h-5 bg-white/10 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:border-neutral-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-sky-600" />
                       </div>
                     </label>
                   </div>
@@ -730,7 +730,7 @@ export default function App() {
                       </>
                     ) : (
                       <>
-                        Convert Image now ! <ArrowRight className="w-4 h-4 text-white/80" />
+                        Convert Image now ! <ArrowRight className="w-4 h-4 text-slate-700" />
                       </>
                     )}
                   </button>
@@ -745,9 +745,9 @@ export default function App() {
                 <div className="glass p-5 flex flex-col min-h-[460px]">
                   
                   {/* Results SubBar */}
-                  <div className="flex justify-between items-center mb-4 text-xs font-semibold text-white/50 border-b border-white/5 pb-3">
+                  <div className="flex justify-between items-center mb-4 text-xs font-semibold text-slate-500 border-b border-slate-200 pb-3">
                     <h2 className="flex items-center gap-2 text-white">
-                      <Code2 className="w-4 h-4 text-green-400" />
+                      <Code2 className="w-4 h-4 text-sky-500" />
                       Visual preview screen
                     </h2>
                     {svgResult && (
@@ -759,22 +759,22 @@ export default function App() {
                   </div>
 
                   {/* SVG Stage */}
-                  <div className="flex-1 bg-black/40 border border-white/10 rounded-2xl flex flex-col relative overflow-hidden min-h-[340px]">
+                  <div className="flex-1 bg-slate-100/80 border border-slate-200 rounded-2xl flex flex-col relative overflow-hidden min-h-[340px]">
                     {svgResult ? (
                       <div
                         className="absolute inset-0 p-6 flex items-center justify-center svg-preview-container select-all"
                         dangerouslySetInnerHTML={{ __html: svgResult }}
                       />
                     ) : isProcessing ? (
-                      <div className="absolute inset-0 flex flex-col items-center justify-center text-white/50 gap-4">
-                        <div className="p-4 bg-green-500/5 rounded-full ring-2 ring-green-500/20">
-                          <RefreshCw className="w-10 h-10 text-green-400 animate-spin" />
+                      <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-500 gap-4">
+                        <div className="p-4 bg-sky-100 rounded-full ring-2 ring-sky-200">
+                          <RefreshCw className="w-10 h-10 text-sky-500 animate-spin" />
                         </div>
                         <p className="text-xs font-medium animate-pulse">Running precision vector calculations...</p>
                       </div>
                     ) : (
-                      <div className="absolute inset-0 flex flex-col items-center justify-center text-white/40 p-8 text-center gap-3">
-                        <div className="p-4 bg-white/5 rounded-full text-green-400/60">
+                      <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-500 p-8 text-center gap-3">
+                        <div className="p-4 bg-slate-100 rounded-full text-sky-500/70">
                           <Maximize2 className="w-8 h-8 opacity-40" />
                         </div>
                         <p className="max-w-xs text-xs font-medium leading-relaxed">
@@ -791,7 +791,7 @@ export default function App() {
                       disabled={!svgResult}
                       className="flex-1 py-2.5 px-4 btn-secondary text-xs rounded-xl flex items-center justify-center gap-2 disabled:opacity-40"
                     >
-                      <Download className="w-4 h-4 text-green-400" />
+                      <Download className="w-4 h-4 text-sky-500" />
                       Download SVG file
                     </button>
                     <button
@@ -799,7 +799,7 @@ export default function App() {
                       disabled={!svgResult}
                       className="py-2.5 px-4 btn-secondary text-xs rounded-xl flex items-center justify-center gap-2 disabled:opacity-40"
                     >
-                      {copied ? <Check className="w-4 h-4 text-green-400" /> : <Copy className="w-4 h-4 text-green-400" />}
+                      {copied ? <Check className="w-4 h-4 text-sky-500" /> : <Copy className="w-4 h-4 text-sky-500" />}
                       {copied ? 'Copied code' : 'Copy code'}
                     </button>
                   </div>
@@ -809,16 +809,16 @@ export default function App() {
                 <div className="glass p-5 flex flex-col rounded-2xl">
                   <div className="flex justify-between items-center mb-3">
                     <div className="flex items-center gap-2">
-                      <Code2 className="w-4 h-4 text-green-400" />
+                      <Code2 className="w-4 h-4 text-sky-500" />
                       <h3 className="text-xs font-bold text-white uppercase tracking-wider">SVG raw code output</h3>
-                      <span className="text-[9px] bg-green-500/10 text-green-400 px-2 py-0.5 rounded-full font-mono uppercase font-bold tracking-wider">Live update</span>
+                      <span className="text-[9px] bg-sky-100 text-sky-500 px-2 py-0.5 rounded-full font-mono uppercase font-bold tracking-wider">Live update</span>
                     </div>
                     {svgResult && (
                       <button
                         onClick={copyCodeToClip}
-                        className="flex items-center gap-1.5 text-[11px] hover:text-green-400 transition-colors text-white/50 bg-white/5 hover:bg-white/10 px-3 py-1 rounded-lg"
+                        className="flex items-center gap-1.5 text-[11px] hover:text-sky-500 transition-colors text-slate-500 bg-slate-50 hover:bg-slate-100 px-3 py-1 rounded-lg"
                       >
-                        {copied ? <Check className="w-3.5 h-3.5 text-green-400" /> : <Copy className="w-3.5 h-3.5" />}
+                        {copied ? <Check className="w-3.5 h-3.5 text-sky-500" /> : <Copy className="w-3.5 h-3.5" />}
                         {copied ? 'Copied' : 'Copy raw XML code'}
                       </button>
                     )}
@@ -826,11 +826,11 @@ export default function App() {
 
                   <div className="relative">
                     {svgResult ? (
-                      <pre className="text-[10px] font-mono p-4 bg-black/60 text-slate-300 rounded-xl overflow-x-auto max-h-48 border border-white/5 select-all leading-normal whitespace-pre">
+                      <pre className="text-[10px] font-mono p-4 bg-slate-100 text-slate-300 rounded-xl overflow-x-auto max-h-48 border border-slate-200 select-all leading-normal whitespace-pre">
                         <code>{svgResult}</code>
                       </pre>
                     ) : (
-                      <div className="py-8 text-center text-xs text-white/30 border border-dashed border-white/10 rounded-xl">
+                      <div className="py-8 text-center text-xs text-slate-400 border border-dashed border-slate-200 rounded-xl">
                         The raw vector SVG structure will show here after conversion.
                       </div>
                     )}
@@ -841,6 +841,21 @@ export default function App() {
             </motion.div>
           )}
         </main>
+
+        <footer className="mt-6 text-center text-[11px] text-slate-500">
+          <p className="inline-flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
+            <span>Created by Sreerag Harikrishnan</span>
+            <span className="text-slate-300">•</span>
+            <a
+              href="https://touch-flow-2026.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-sky-500 hover:text-sky-600 transition-colors"
+            >
+              Other free projects
+            </a>
+          </p>
+        </footer>
       </div>
     </div>
   );
