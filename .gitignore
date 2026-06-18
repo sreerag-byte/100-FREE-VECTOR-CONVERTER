@@ -1,30 +1,31 @@
 # Node
 node_modules/
 dist/
-.env
+build/
+.cache/
+
+# Environment files
+.env*
+!.env.example
+
+# Logs
 npm-debug.log
 yarn-error.log
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
 
 # Python
 __pycache__/
 *.py[cod]
 venv/
-.env
 pip-log.txt
-
-# Build / misc
-.DS_Store
-Thumbs.db
-coverage/
-*.log
 
 # IDEs
 .vscode/
 .idea/
-
-# Static site / deploy
-build/
-.cache/
 
 # Optional local files
 local-config.json

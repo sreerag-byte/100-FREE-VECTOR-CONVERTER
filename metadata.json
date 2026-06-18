@@ -1,0 +1,8 @@
+{
+  "name": "Vector Converter",
+  "description": "Convert images into high-quality vector graphics (SVG).",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

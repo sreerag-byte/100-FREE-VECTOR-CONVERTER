@@ -20,11 +20,13 @@ How it works (technical summary)
 
 Quickstart (open locally)
 1. Clone the repository:
-   git clone https://github.com/sreerag-byte/100-FREE-VECTOR-CONVERTER.git
-2. Serve the folder or open index.html in a modern browser:
-   - Recommended: python -m http.server 8000
-   - Visit: http://localhost:8000
-3. Use the demo UI to select an image, adjust options, trace, and export SVG.
+   `git clone https://github.com/sreerag-byte/100-FREE-VECTOR-CONVERTER.git`
+2. Install dependencies:
+   `npm install`
+3. Serve the folder or open `index.html` in a modern browser:
+   - Recommended: `npm run dev`
+   - Visit: `http://localhost:5173`
+4. Use the demo UI to select an image, adjust options, trace, and export SVG.
 
 Privacy & security
 - Images processed by the app never leave your device — no uploads, no remote processing.
@@ -35,4 +37,4 @@ Contributing
 - Contributions welcome: bug reports, feature requests, UI improvements, export formats, and documentation.
 - Workflow:
   1. Open an issue for large changes.
-  2. Fork, create a feature
+  2. Fork, create a feature branch, make your changes, and submit a pull request.
