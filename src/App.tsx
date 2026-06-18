@@ -372,7 +372,7 @@ export default function App() {
             </div>
             <div>
               <h1 className="text-xl md:text-2xl font-extrabold tracking-tight">
-                VECTRA<span className="font-light text-sky-500"> VECTOR</span>
+                Free Vector Image Converter <span className="font-light text-sky-500">by Day Dream</span>
               </h1>
               <p className="text-xs text-slate-500 font-normal">Convert your images to high quality vector graphic shapes</p>
             </div>

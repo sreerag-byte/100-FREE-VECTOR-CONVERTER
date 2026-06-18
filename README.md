@@ -1,4 +1,4 @@
-# Vector Converter
+# Free Vector Image Converter by Day Dream
 
 A 100% free, privacy-first image-to-vector converter that runs entirely in your browser. Converts raster images to clean, editable SVG using the open-source ImageTracerJS engine — no uploads, no caching, no paid APIs.
 
