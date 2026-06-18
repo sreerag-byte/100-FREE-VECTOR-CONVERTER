@@ -365,7 +365,7 @@ export default function App() {
       <div className="max-w-6xl mx-auto space-y-6">
         
         {/* Top Header Navigation Block */}
-        <header className="flex flex-col md:flex-row justify-between items-center p-6 glass rounded-2xl gap-4">
+        <header className="flex flex-col md:flex-row justify-between items-center p-6 glass glass-premium rounded-2xl gap-4">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-sky-100 border border-sky-200 text-sky-600">
               <Sparkles size={24} className="animate-pulse" />
@@ -484,7 +484,7 @@ export default function App() {
               <div className="lg:col-span-5 space-y-6">
                 
                 {/* Uploaded Image details card */}
-                <div className="glass p-5 space-y-4">
+                <div className="glass glass-premium p-5 space-y-4">
                   <div className="flex justify-between items-center border-b border-slate-200 pb-2">
                     <h2 className="text-xs font-bold uppercase tracking-wider text-sky-500 flex items-center gap-2">
                       <ImageIcon className="w-4 h-4" />
@@ -524,7 +524,7 @@ export default function App() {
                 </div>
 
                 {/* Conversion options configuration */}
-                <div className="glass p-5 space-y-5">
+                <div className="glass glass-premium p-5 space-y-5">
                   
                   {/* Selector Tabs */}
                   <div className="flex bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs">
@@ -742,7 +742,7 @@ export default function App() {
               <div className="lg:col-span-7 flex flex-col gap-6">
                 
                 {/* Visual Preview Block */}
-                <div className="glass p-5 flex flex-col min-h-[460px]">
+                <div className="glass glass-premium p-5 flex flex-col min-h-[460px]">
                   
                   {/* Results SubBar */}
                   <div className="flex justify-between items-center mb-4 text-xs font-semibold text-slate-500 border-b border-slate-200 pb-3">
@@ -806,7 +806,7 @@ export default function App() {
                 </div>
 
                 {/* SVG Code Block: display code always */}
-                <div className="glass p-5 flex flex-col rounded-2xl">
+                <div className="glass glass-premium p-5 flex flex-col rounded-2xl">
                   <div className="flex justify-between items-center mb-3">
                     <div className="flex items-center gap-2">
                       <Code2 className="w-4 h-4 text-sky-500" />
